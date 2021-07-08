@@ -144,7 +144,7 @@ const RightContent = ({ contentClass, toolBarClass }) => {
             <Grid style={{ height: "400px" }}>
               <CoffeChart />
             </Grid>
-            <Grid>
+            <Grid style={{ height: "400px" }}>
               <PopulationChart />
             </Grid>
             <Grid>
