@@ -12,6 +12,9 @@ import IncomeData from "../IncomeData/index";
 import Card from "../../../../Components/Card/index";
 import TableWrapper from "../../../../Components/TableWrapper";
 import CoffeChart from "../../../../Components/CoffeeChart";
+import PopulationChart from "../../../../Components/PopulationChart";
+import IncomeChart from "../../../../Components/IncomeChart/index";
+import TimeChart from "../../../../Components/TimeChart/index";
 
 const StickerWidgetData = [
   {
@@ -137,8 +140,17 @@ const RightContent = ({ contentClass, toolBarClass }) => {
                   marginBottom: "20px",
                 }}
               />
+            </Grid>
+            <Grid style={{ height: "400px" }}>
               <CoffeChart />
             </Grid>
+            <Grid>
+              <PopulationChart />
+            </Grid>
+            <Grid>
+              <IncomeChart />
+            </Grid>
+            <TimeChart />
           </Grid>
         </Grid>
       </Grid>
