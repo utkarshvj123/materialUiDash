@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import GetAppIcon from "@material-ui/icons/GetApp";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -26,27 +27,39 @@ const useStyles = makeStyles({
   },
   header: {
     display: "flex",
+    justifyContent: "space-between",
   },
+
   barTitle: {
     display: "flex",
   },
 });
 
-const data = [
-  { title: "Markting", value: 70 },
-  { title: "Advertisement", value: 80 },
-  { title: "Consulting", value: 40 },
-  { title: "Development", value: 60 },
-];
+const detailData = {
+  name: "Income",
+  iconUrl: GetAppIcon,
+  data: [
+    { title: "Markting", value: 70 },
+    { title: "Advertisement", value: 80 },
+    { title: "Consulting", value: 40 },
+    { title: "Development", value: 60 },
+  ],
+};
 
 function IncomeData(props) {
   const classes = useStyles();
+  const IconUrl = detailData?.iconUrl;
   return (
     <div className={classes.root}>
       <div className={classes.header}>
         <h2 style={{ fontWeight: "500" }}>Income</h2>
+        {detailData?.iconUrl && (
+          <div>
+            <IconUrl />
+          </div>
+        )}
       </div>
-      {data.map((obj) => {
+      {detailData?.data.map((obj) => {
         return (
           <div>
             <div className={classes.barTitle}>
